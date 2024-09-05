@@ -16,10 +16,16 @@ sudo dpkg -i splunk-9.3.0-51ccf43db5bd-linux-2.6-amd64.deb
 ```
 
 
-Create the Administrator username and strong password. For great security practices create a user account with limited privilieges to refrain from using the adminstrator account.
+Create the Administrator username and strong password. For great security practices, create a user account with limited privilieges to refrain from using the adminstrator account.
 ```
 sudo /opt/splunk/bin/splunk add user <username> -password <password> -role <role>
 ```
+
+
+<img width="1440" alt="Splunk User" src="https://github.com/user-attachments/assets/5a744097-cfb3-4467-84cc-f0b15bd51411">
+
+
+
 Install Sysinternals Sysmon on both the Windows 10 and Windows server. We will use the sysmon configuration xml file from Olaf. 
 ```
 https://github.com/olafhartong/sysmon-modular
