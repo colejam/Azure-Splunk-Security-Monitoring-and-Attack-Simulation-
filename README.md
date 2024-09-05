@@ -20,3 +20,17 @@ Create the Administrator username and strong password. For great security practi
 ```
 sudo /opt/splunk/bin/splunk add user <username> -password <password> -role <role>
 ```
+Install Sysinternals Sysmon on both the Windows 10 and Windows server. We will use the sysmon configuration xml file from Olaf. 
+```
+https://github.com/olafhartong/sysmon-modular
+```
+
+<img width="1440" alt="SysmonConfig" src="https://github.com/user-attachments/assets/5ed8fc53-930e-454c-b426-1d1d89f2d68e">
+
+
+
+Install the Splunk Universal Forwarder on both the Windows 10 machine and the Windows server. Once the forwarder is installed, set the receiving index IP address to the Splunk server address and set the receiving port to 9997. Finally, change the Splunk Forwarder settings in Services to "Local System" and then restart the Splunk Forwarder.
+
+
+
+<img width="1440" alt="SplunkForwarder Restart" src="https://github.com/user-attachments/assets/ae98dbbc-9c8a-4edf-a156-bc68478a70f9">
