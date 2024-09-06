@@ -40,3 +40,30 @@ Install the Splunk Universal Forwarder on both the Windows 10 machine and the Wi
 
 
 <img width="1440" alt="SplunkForwarder Restart" src="https://github.com/user-attachments/assets/ae98dbbc-9c8a-4edf-a156-bc68478a70f9">
+
+
+
+Update and upgrade the repositories on Kali Linux. Then, install Crowbar, which will be used to conduct the brute force attack against RDP.
+
+```
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install -y crowbar
+```
+
+Create a new directory called AD-Project inside the Desktop directory. Then, locate the rockyou.txt.gz file by navigating to the /usr/share/wordlists/ directory. Once the file is unzipped, copy it into the AD-Project directory.
+
+
+```
+cd Desktop
+mkdir AD-Project
+cd /usr/share/wordlist/
+sudo gunzip rockyou.txt.gz
+cp rockyou.txt ~/Desktop/AD-Project
+```
+
+To use only the first 20 words in rockyou.txt, use the head command to create a smaller password list. Then edit the txt file to insert the correct password for testing purposes.
+
+```
+head -n 20 rockyou.txt > passwords.txt
+nano passwords.txt
+```
