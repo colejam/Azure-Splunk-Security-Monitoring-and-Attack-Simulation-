@@ -1,14 +1,14 @@
 # Azure-Splunk-Security-Monitoring-and-Attack-Simulation-
 
-Installed Windows Server 2022 onto a virtual machine using a hypervisor (VMWARE Fusion). Installed Active Directory to created organizational units and users. 
+Installed Windows Server 2022 on a virtual machine using VMware Fusion. Set up Active Directory to create organizational units and users.
 ![AD](https://github.com/user-attachments/assets/775610bc-f1fe-4c37-9cc4-4cefc82c66fc)
 
-Windows 10 machine that allows me to logon as a different users.
+A Windows 10 machine that allows me to logon as a different users.
 <img width="1440" alt="Ronni User" src="https://github.com/user-attachments/assets/b27c62c9-7502-41bf-9d87-99a9752e1a0b">
 
 
 
-Install the Splunk Enterprise using the download or wget link for the corresponding operating system. Install the package once downloaded.
+Download Splunk Enterprise using the download or wget link for the corresponding operating system. Once downloaded, install the package.
 
 ```
 wget -O splunk-9.3.0-51ccf43db5bd-linux-2.6-amd64.deb "https://download.splunk.com/products/splunk/releases/9.3.0/linux/splunk-9.3.0-51ccf43db5bd-linux-2.6-amd64.deb"
@@ -41,6 +41,8 @@ Install the Splunk Universal Forwarder on both the Windows 10 machine and the Wi
 
 <img width="1440" alt="SplunkForwarder Restart" src="https://github.com/user-attachments/assets/ae98dbbc-9c8a-4edf-a156-bc68478a70f9">
 
+<img width="1440" alt="Remote Access" src="https://github.com/user-attachments/assets/a630147c-0c06-4c64-a9c0-cdeea056d026">
+
 
 
 Update and upgrade the repositories on Kali Linux. Then, install Crowbar, which will be used to conduct the brute force attack against RDP.
@@ -67,3 +69,23 @@ To use only the first 20 words in rockyou.txt, use the head command to create a 
 head -n 20 rockyou.txt > passwords.txt
 nano passwords.txt
 ```
+Testing for connectivity between the attacking and victim machine. 
+<img width="1440" alt="Ping" src="https://github.com/user-attachments/assets/805a45fa-e917-4ae8-9bb1-6c75cfaa84a3">
+
+
+
+Utilized Nmap for enumeration to determine which ports where opened and the services running. 
+<img width="1440" alt="Nmap" src="https://github.com/user-attachments/assets/cd096487-1471-4d60-8e27-b55a32029ec5">
+
+
+
+Performed a brute force attack on RDP using Crowbar. 
+<img width="1440" alt="Crowbar" src="https://github.com/user-attachments/assets/d34df61d-52d4-46ec-af93-2883ae0058c9">
+
+
+Used Splunk to analyze the failed logon attempt.
+<img width="1440" alt="Splunk-Fail" src="https://github.com/user-attachments/assets/9b012dce-3779-4afe-b90e-e2fb4bba54ec">
+
+Used Splunk to analyze the successful logon attempt.
+<img width="1440" alt="Splunk-success" src="https://github.com/user-attachments/assets/02c8d35a-086b-4fd5-ad29-0ba3a1a22965">
+
